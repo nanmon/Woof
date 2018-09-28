@@ -1,0 +1,66 @@
+# Relay
+
+interface Node {
+    id: ID!
+}
+
+type PageInfo {
+    hasPreviousPage: Boolean!
+    hasNextPage: Boolean!
+    startCursor: Cursor
+    endCursor: Cursor
+}
+
+scalar Cursor
+scalar Timestamp
+
+# Root types
+
+type Query {
+    viewer: Viewer
+    node(id: ID!): Node
+}
+
+
+type Mutation {
+    logIn(input: LogInInput!): LogInPayload
+    woof(input: WoofInput!): WoofPayload
+}
+
+type Viewer {
+    me: User
+}
+
+# Business
+
+type User implements Node {
+    id: ID!
+    username: String!
+}
+
+# Connections
+
+# Inputs & Payloads
+
+input LogInInput {
+    username: String!
+    device: String!
+    clientMutationId: String
+}
+
+type LogInPayload {
+    user: User!
+    token: String!
+    exp: Timestamp!
+    clientMutationId: String
+}
+
+input WoofInput {
+    username: String!
+    clientMutationId: String
+}
+
+type WoofPayload {
+    ok: Boolean!
+    clientMutationId: String
+}

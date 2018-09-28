@@ -1,0 +1,53 @@
+{
+  "name": "MyKitchen",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "jest-expo": "~27.0.0",
+    "react-native-scripts": "1.14.0",
+    "react-test-renderer": "16.3.1",
+    "relay-compiler": "^1.6.0"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "jest",
+    "relay": "relay-compiler --src . --schema ./schema.graphql"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "apollo-link": "^1.2.2",
+    "apollo-link-http": "^1.5.4",
+    "apollo-link-ws": "^1.0.8",
+    "apollo-upload-client": "^8.1.0",
+    "apollo-utilities": "^1.0.18",
+    "babel-plugin-react": "^1.0.0",
+    "babel-plugin-relay": "^1.6.0",
+    "expo": "^27.0.1",
+    "extract-files": "^3.1.0",
+    "graphql": "^0.13.2",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "native-base": "^2.4.5",
+    "prop-types": "^15.6.1",
+    "react": "16.3.1",
+    "react-native": "~0.55.2",
+    "react-native-datepicker": "^1.7.2",
+    "react-native-gifted-chat": "^0.4.3",
+    "react-native-simple-toast": "0.0.8",
+    "react-native-step-indicator": "0.0.9",
+    "react-native-table-component": "^1.1.8",
+    "react-native-view-overflow": "0.0.3",
+    "react-navigation": "^2.1.0",
+    "react-relay": "^1.6.0",
+    "relay-runtime": "^1.6.0",
+    "sentry-expo": "^1.9.0",
+    "subscriptions-transport-ws": "^0.9.14",
+    "validator": "^10.3.0"
+  }
+}
